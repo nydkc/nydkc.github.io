@@ -347,14 +347,417 @@
 
 				});
 
+
+		// Menu2.
+			var $menu2 = $('#menu2'),
+				$menu2Inner;
+
+			$menu2.wrapInner('<div class="inner"></div>');
+			$menu2Inner = $menu2.children('.inner');
+			$menu2._locked = false;
+
+			$menu2._lock = function() {
+
+				if ($menu2._locked)
+					return false;
+
+				$menu2._locked = true;
+
+				window.setTimeout(function() {
+					$menu2._locked = false;
+				}, 350);
+
+				return true;
+
+			};
+
+			$menu2._show = function() {
+
+				if ($menu2._lock())
+					$body.addClass('is-menu2-visible');
+
+			};
+
+			$menu2._hide = function() {
+
+				if ($menu2._lock())
+					$body.removeClass('is-menu2-visible');
+
+			};
+
+			$menu2._toggle = function() {
+
+				if ($menu2._lock())
+					$body.toggleClass('is-menu2-visible');
+
+			};
+
+			$menu2Inner
+				.on('click', function(event) {
+					event.stopPropagation();
+				})
+				.on('click', 'a', function(event) {
+
+					var href = $(this).attr('href');
+
+					event.preventDefault();
+					event.stopPropagation();
+
+					// Hide.
+						$menu2._hide();
+
+					// Redirect.
+						window.setTimeout(function() {
+							window.location.href = href;
+						}, 250);
+
+				});
+
+			$menu2
+				.appendTo($body)
+				.on('click', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					$body.removeClass('is-menu2-visible');
+
+				})
+				.append('<a class="close" href="#menu2">Close</a>');
+
+			$body
+				.on('click', 'a[href="#menu2"]', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					// Toggle.
+						$menu2._toggle();
+
+				})
+				.on('click', function(event) {
+
+					// Hide.
+						$menu2._hide();
+
+				})
+				.on('keydown', function(event) {
+
+					// Hide on escape.
+						if (event.keyCode == 27)
+							$menu2._hide();
+
+				});
+
+
+			// Menu3.
+			var $menu3 = $('#menu3'),
+				$menu3Inner;
+
+			$menu3.wrapInner('<div class="inner"></div>');
+			$menu3Inner = $menu3.children('.inner');
+			$menu3._locked = false;
+
+			$menu3._lock = function() {
+
+				if ($menu3._locked)
+					return false;
+
+				$menu3._locked = true;
+
+				window.setTimeout(function() {
+					$menu3._locked = false;
+				}, 350);
+
+				return true;
+
+			};
+
+			$menu3._show = function() {
+
+				if ($menu3._lock())
+					$body.addClass('is-menu3-visible');
+
+			};
+
+			$menu3._hide = function() {
+
+				if ($menu3._lock())
+					$body.removeClass('is-menu3-visible');
+
+			};
+
+			$menu3._toggle = function() {
+
+				if ($menu3._lock())
+					$body.toggleClass('is-menu3-visible');
+
+			};
+
+			$menu3Inner
+				.on('click', function(event) {
+					event.stopPropagation();
+				})
+				.on('click', 'a', function(event) {
+
+					var href = $(this).attr('href');
+
+					event.preventDefault();
+					event.stopPropagation();
+
+					// Hide.
+						$menu3._hide();
+
+					// Redirect.
+						window.setTimeout(function() {
+							window.location.href = href;
+						}, 250);
+
+				});
+
+			$menu3
+				.appendTo($body)
+				.on('click', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					$body.removeClass('is-menu3-visible');
+
+				})
+				.append('<a class="close" href="#menu3">Close</a>');
+
+			$body
+				.on('click', 'a[href="#menu3"]', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					// Toggle.
+						$menu3._toggle();
+
+				})
+				.on('click', function(event) {
+
+					// Hide.
+						$menu3._hide();
+
+				})
+				.on('keydown', function(event) {
+
+					// Hide on escape.
+						if (event.keyCode == 27)
+							$menu3._hide();
+
+				});
+
+
+		// Menu4.
+			var $menu4 = $('#menu4'),
+				$menu4Inner;
+
+			$menu4.wrapInner('<div class="inner"></div>');
+			$menu4Inner = $menu4.children('.inner');
+			$menu4._locked = false;
+
+			$menu4._lock = function() {
+
+				if ($menu4._locked)
+					return false;
+
+				$menu4._locked = true;
+
+				window.setTimeout(function() {
+					$menu4._locked = false;
+				}, 350);
+
+				return true;
+
+			};
+
+			$menu4._show = function() {
+
+				if ($menu4._lock())
+					$body.addClass('is-menu4-visible');
+
+			};
+
+			$menu4._hide = function() {
+
+				if ($menu4._lock())
+					$body.removeClass('is-menu4-visible');
+
+			};
+
+			$menu4._toggle = function() {
+
+				if ($menu4._lock())
+					$body.toggleClass('is-menu4-visible');
+
+			};
+
+			$menu4Inner
+				.on('click', function(event) {
+					event.stopPropagation();
+				})
+				.on('click', 'a', function(event) {
+
+					var href = $(this).attr('href');
+
+					event.preventDefault();
+					event.stopPropagation();
+
+					// Hide.
+						$menu4._hide();
+
+					// Redirect.
+						window.setTimeout(function() {
+							window.location.href = href;
+						}, 250);
+
+				});
+
+			$menu4
+				.appendTo($body)
+				.on('click', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					$body.removeClass('is-menu4-visible');
+
+				})
+				.append('<a class="close" href="#menu4">Close</a>');
+
+			$body
+				.on('click', 'a[href="#menu4"]', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					// Toggle.
+						$menu4._toggle();
+
+				})
+				.on('click', function(event) {
+
+					// Hide.
+						$menu4._hide();
+
+				})
+				.on('keydown', function(event) {
+
+					// Hide on escape.
+						if (event.keyCode == 27)
+							$menu4._hide();
+
+				});
+
+
+		// Menu5.
+			var $menu5 = $('#menu5'),
+				$menu5Inner;
+
+			$menu5.wrapInner('<div class="inner"></div>');
+			$menu5Inner = $menu5.children('.inner');
+			$menu5._locked = false;
+
+			$menu5._lock = function() {
+
+				if ($menu5._locked)
+					return false;
+
+				$menu5._locked = true;
+
+				window.setTimeout(function() {
+					$menu5._locked = false;
+				}, 350);
+
+				return true;
+
+			};
+
+			$menu5._show = function() {
+
+				if ($menu5._lock())
+					$body.addClass('is-menu5-visible');
+
+			};
+
+			$menu5._hide = function() {
+
+				if ($menu5._lock())
+					$body.removeClass('is-menu5-visible');
+
+			};
+
+			$menu5._toggle = function() {
+
+				if ($menu5._lock())
+					$body.toggleClass('is-menu5-visible');
+
+			};
+
+			$menu5Inner
+				.on('click', function(event) {
+					event.stopPropagation();
+				})
+				.on('click', 'a', function(event) {
+
+					var href = $(this).attr('href');
+
+					event.preventDefault();
+					event.stopPropagation();
+
+					// Hide.
+						$menu5._hide();
+
+					// Redirect.
+						window.setTimeout(function() {
+							window.location.href = href;
+						}, 250);
+
+				});
+
+			$menu5
+				.appendTo($body)
+				.on('click', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					$body.removeClass('is-menu5-visible');
+
+				})
+				.append('<a class="close" href="#menu5">Close</a>');
+
+			$body
+				.on('click', 'a[href="#menu5"]', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					// Toggle.
+						$menu5._toggle();
+
+				})
+				.on('click', function(event) {
+
+					// Hide.
+						$menu5._hide();
+
+				})
+				.on('keydown', function(event) {
+
+					// Hide on escape.
+						if (event.keyCode == 27)
+							$menu5._hide();
+
+				});
+
+
+
+
 	});
-
-	$(function() {
-        $(".dial").knob();
-    });
-
-    $('.dial')
-        .val(10000)
-        .trigger('change');
 
 })(jQuery);
