@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <link rel="stylesheet" href="css/micromodal.css" />
 	</head>
 	<body>
 
@@ -184,6 +185,29 @@
 					</footer>
 			</div>
 
+            <div class="modal micromodal-slide" id="flash-page" aria-hidden="true">
+                <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                        <header class="modal__header">
+                            <h2 class="modal__title center" id="modal-1-title">
+                                Key Club International Convention 2019 | Baltimore
+                            </h2>
+                            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                        </header>
+                        <main class="modal__content" id="modal-1-content">
+                            <p style="margin-bottom: 1em">
+                                Join us at the capital along with 1,500 Key Club members from around the world to celebrate a year of service!
+                                <br>
+                                Learn more about <a href="icon.html">ICON 2019</a>.
+                            </p>
+                            <div class="center">
+                                <img src="cpics/dc_at_night.jpg" style="max-width: 100%">
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -192,6 +216,12 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			
+
+            <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+            <script>
+                MicroModal.show('flash-page');
+            </script>
+
+
 	</body>
 </html>
